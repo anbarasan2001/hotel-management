@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>customer registration </title>
+</head>
+<body>
+    {% include 'commonlink.html' %}
+    <center>
+        <div class="n1">
+    <form action="cusreg" method="POST">
+        {% csrf_token %}
+        <table class="table">
+             {{ myform.as_table}}
+            <tr><td><input type="submit" value="register"></input></td></tr>
+        </table>
+    </form>
+</body>
+</html>

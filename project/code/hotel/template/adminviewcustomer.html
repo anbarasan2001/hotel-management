@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% include 'adminlink.html' %}
+    <center>
+        <div class="n1">
+    <table class="table">
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th> mail</th>
+            <th>mbl</th>
+            <th>address</th>
+        </tr>
+        {% for i in data %}
+        <tr>
+            <td>{{i.id}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.mail}}</td>
+            <td>{{i.mbl}}</td>
+            <td>{{i.address}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    
+</body>
+</html>

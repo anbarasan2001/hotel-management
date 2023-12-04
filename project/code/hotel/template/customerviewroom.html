@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>customerviewroom</title>
+</head>
+<body>
+    {% include 'customerlink.html' %}
+    <h1>customer view</h1>
+    <center>
+        <div class="n1">
+    <table class="table">
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>no of beds</th>
+            <th>Checkin</th>
+        </tr>
+        {% for i in data %}
+        <tr>
+            <td>{{i.id}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.no_of_beds}}</td>
+            <td><a href="{% url 'roomcheckin' %}?roomid={{i.id}}">CHECK IN</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
